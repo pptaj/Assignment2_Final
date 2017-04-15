@@ -84,7 +84,7 @@ height:650px;
   </div>
   <div class="form-group">
     <label for="dti">DTI:</label>
-    <input type="number" name="dti" class="form-control" id="dti"><label>${requestScope.error}</label>
+    <input type="text" name="dti" class="form-control" id="dti"><label>${requestScope.error}</label>
   </div>
   <div class="form-group">
     <label for="employmentLength">Employment Length:</label>
