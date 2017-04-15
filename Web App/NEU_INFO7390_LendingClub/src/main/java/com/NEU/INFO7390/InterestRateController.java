@@ -222,13 +222,13 @@ public class InterestRateController {
 //		response.setAttribute("decisionProbability_NoCluster", deviationValueFromAPIWithNoCluster);
 //		________________
 		String interestRateCluster = "3.1", deviationValueCluster0 = "";
-		/*
+		
 //		________________
 //		Get reults from Prediction API for Cluster 0
 		
 		if(clusterNumber.equals("0")){
-			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/7579b3358ad24d2ab22e55f7ed4fb29a/execute?api-version=2.0&details=true";
-			apikey = "bnKDCK4B/wRq9r5vosZHsFenz9pl+hHSTYCNC2DstDG9ldQzAlkY0nQPh4Nm3MloKQeqI53ividAlbULx5TvkA==";
+			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/358d07e5bf4948ed9267e0608bd608df/execute?api-version=2.0&details=true";
+			apikey = "nYp8XjEQXeojw4/e+9X5ozfiw8G4VMoXamzWLuSY4VKeLOXBw96Mw7bBqjeDx23YelVYSZ4ZwuuzsgSCqPKqdA==";
 
 			ArrayList list3 = predictionWithNoCluster(apiurl, apikey, jsonBody);
 			interestRateCluster = (String)list3.get(0);
@@ -242,8 +242,8 @@ public class InterestRateController {
 //		Get reults from Prediction API for Cluster 1
 		String deviationValueCluster1 = "";
 		if(clusterNumber.equals("1")){
-			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/781f0718e251437d8f500c4ad9466428/execute?api-version=2.0&details=true";
-			apikey = "dGNpo5ZnHDKyeANsTr2ed9/OxyXbCCULFFterW/eb8UgXeMiq0Tsjsvydr/Sxa3Tlliddi2Tn+TBst5t7pRioQ==";
+			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/8e6b0378b2ce45439ea60746aeb70273/execute?api-version=2.0&details=true";
+			apikey = "4ec6z+MxgaKIPNRIG08pVH8FreoruOz0uQu2DsklYQe2nxw75L5JFUwpGKhFvM73I1pxoJsv6nf/L4p30BM3bw==";
 
 			ArrayList list4 = predictionWithNoCluster(apiurl, apikey, jsonBody);
 			interestRateCluster = (String)list4.get(0);
@@ -260,12 +260,12 @@ public class InterestRateController {
 //		Get reults from Prediction API for Cluster 2
 		String deviationValueCluster2 = "";
 		if(clusterNumber.equals("2")){
-			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/781f0718e251437d8f500c4ad9466428/execute?api-version=2.0&details=true";
-			apikey = "dGNpo5ZnHDKyeANsTr2ed9/OxyXbCCULFFterW/eb8UgXeMiq0Tsjsvydr/Sxa3Tlliddi2Tn+TBst5t7pRioQ==";
-
+			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/03370876bee6436d89da6664c75986ec/execute?api-version=2.0&details=true";
+			apikey = "4ec6z+MxgaKIPNRIG08pVH8FreoruOz0uQu2DsklYQe2nxw75L5JFUwpGKhFvM73I1pxoJsv6nf/L4p30BM3bw==";
+			
 			ArrayList list5 = predictionWithNoCluster(apiurl, apikey, jsonBody);
 			interestRateCluster = (String)list5.get(0);
-			deviationValueCluster2 = (String)list5.get(1);
+//			deviationValueCluster2 = (String)list5.get(1);
 			System.out.println("Interest Rate from kmeans clustering : " + interestRateCluster);
 			response.setAttribute("interestRate_kmeans", interestRateCluster);
 
@@ -278,9 +278,8 @@ public class InterestRateController {
 //		Get reults from Prediction API for Cluster 3
 		String deviationValueCluster3 = "";
 		if(clusterNumber.equals("3")){
-			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/781f0718e251437d8f500c4ad9466428/execute?api-version=2.0&details=true";
-			apikey = "dGNpo5ZnHDKyeANsTr2ed9/OxyXbCCULFFterW/eb8UgXeMiq0Tsjsvydr/Sxa3Tlliddi2Tn+TBst5t7pRioQ==";
-
+			apiurl = "https://ussouthcentral.services.azureml.net/workspaces/a03e4f551ee949ed8fc7ebd0762eab67/services/06fa9099fecf488f830988ba0c6e5a37/execute?api-version=2.0&details=true";
+			apikey = "JKGWhEK6AG6nWuQ3FUOlF5CLXJ4ONtHWinCF5nwq+nhkaKPP8+7I/CY0PRTUqSpcbKHNMWlBpG1gJhcI0Cde2w==";
 			ArrayList list6 = predictionWithNoCluster(apiurl, apikey, jsonBody);
 			interestRateCluster = (String)list6.get(0);
 			deviationValueCluster3 = (String)list6.get(1);
@@ -290,7 +289,7 @@ public class InterestRateController {
 		}
 		
 //		________________
-*/
+
 		
 //		HIGHEST INTEREST RATE
 		Double interestRate_NoCluster = 0.000, interestRate_kmeans = 0.000, highestInterestRate = 0.000;
@@ -308,6 +307,9 @@ public class InterestRateController {
 		
 		response.setAttribute("highestInterestRate", Double.valueOf((new DecimalFormat("###.##")).format(highestInterestRate)));
 		
+		
+		System.out.println("no cluster = " + interestRate_NoCluster + " cluster number = " + clusterNumber);
+		System.out.println("int rate kmeans = " + interestRate_kmeans);
 		return "interestRateOP";
 	}
 	
@@ -349,7 +351,12 @@ public class InterestRateController {
 			JSONArray valuesArray = (JSONArray)values.get("Values");
 			JSONArray firstValuesArray = (JSONArray) valuesArray.get(0);
 			decisionValue = (String)firstValuesArray.get(11);
-			decisionDeviation = (String)firstValuesArray.get(12);
+			try{
+				decisionDeviation = (String)firstValuesArray.get(12);
+			}catch(Exception e){
+				decisionDeviation = "0.0";
+			}
+			
 			
 			list.add(decisionValue);
 			list.add(decisionDeviation);
